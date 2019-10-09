@@ -56,6 +56,7 @@
                 height: 100%;
                 text-align: justify;
                 font-size: 14px;
+                overflow: hidden;
             }
 
             p {
@@ -94,6 +95,33 @@
             .footnote {
                 font-size: 0.9em;
             }
+
+            #legend {
+                display: none;
+            }
+
+            @media screen and (min-width: 800px) {
+                #map {
+                    right: 300px !important;
+                }
+
+                #legend {
+                    display: block !important;
+                    position: absolute;
+                    width: 300px;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                }
+
+                #legend iframe {
+                    width: 100%;
+                    padding-left: 0.5em;
+                    height: 100%;
+                    border: 0;
+                    border-left: 1px solid black;
+                }
+            }
         </style>
     </head>
     <body>
@@ -121,6 +149,9 @@
             </p>
         </div>
         <div id="map"></div>
+        <div id="legend">
+            <iframe src="https://cyclosm.org/legend.html"></iframe>
+        </div>
 
         <script src="js/leaflet.js"></script>
         <script src="js/leaflet-fullHash.js"></script>
