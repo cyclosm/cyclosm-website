@@ -56,6 +56,7 @@
                 height: 100%;
                 text-align: justify;
                 font-size: 14px;
+                overflow: hidden;
             }
 
             p {
@@ -72,6 +73,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
+                right: 42px;
             }
 
             .tingle-modal {
@@ -83,8 +85,8 @@
                 color: #2e4369;
             }
 
-            .tingle-modal__close {
-                background-color: #2e4369;
+            .tingle-modal-box__content {
+                padding: 3rem;
             }
 
             .center {
@@ -94,11 +96,53 @@
             .footnote {
                 font-size: 0.9em;
             }
+
+            #mainTitle {
+                margin-top: 0;
+            }
+
+            #legend {
+                width: 42px;
+                max-width: 100vw;
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            #legend button {
+                height: 100%;
+                width: 42px;
+                background-color: #2e4369;
+                color: #fff;
+                border: 0;
+                cursor: pointer;
+            }
+
+            #legend .iframe {
+                display: none;
+            }
+
+            #legend iframe {
+                width: 100%;
+                padding-left: 0.5em;
+                height: 100%;
+                border: 0;
+                box-sizing: border-box;
+            }
+
+            @media screen and (max-width: 540px) {
+                .tingle-modal__close {
+                    background-color: #2e4369;
+                }
+            }
         </style>
     </head>
     <body>
         <div id="modal-content">
-            <h1 class="center">CyclOSM: OpenStreetMap-based bicycle map</h1>
+            <h1 class="center" id="mainTitle">CyclOSM: OpenStreetMap-based bicycle map</h1>
             <p>
                 <a href="https://github.com/cyclosm/cyclosm-cartocss-style/">CyclOSM</a> is a bicycle-oriented map built on top of <a href="https://www.openstreetmap.org/">OpenStreetMap</a> data. It aims at providing a beautiful and practical map for cyclists, no matter their cycling habits or abilities.
             </p>
@@ -109,18 +153,28 @@
                 The same map also lets you visualize main bicycle touring routes as well as essential POIs when touring (emergency services, shelters, tourism, shops).
             </p>
             <p>
-                A detailed legend is available <a href="legend.html" target="_blank">here</a>.</p><p class="center"><img title="CyclOSM" alt="CyclOSM logo" style="height: 150px;" src="images/logo.png"/>
+                A detailed legend is available <a href="legend.html" target="_blank">here</a>.
+            </p>
+            <p class="center">
+                <a class="modalClose" href="#"><img title="CyclOSM" alt="CyclOSM logo" style="height: 150px;" src="images/logo.png"/></a>
             </p>
 
-            <h2 class="center">Let's start exploring the map!</h2>
+            <h2 class="center"><a class="modalClose" href="#">Let's start exploring the map!</a></h2>
             <p class="footnote">
                 CyclOSM is built on open-source and free software. The source code is available at <a href="https://github.com/cyclosm/cyclosm-cartocss-style/">Github</a> and we welcome <a href="https://github.com/cyclosm/cyclosm-cartocss-style/blob/master/CONTRIBUTING.md">contributions</a>!. The tile server hosting this demonstration is provided by <a href="https://www.openstreetmap.fr">OpenStreetMap-France</a>, many thanks to them for their support!
+            </p>
+            <p class="footnote">
+                CyclOSM map is based on <a href="https://www.openstreetmap.org/">OpenStreetMap</a> data. CyclOSM is not a complete or accurate map of the world and should not be used in such a manner that deficiencies, omissions, inaccuracies or errors could result in death, loss or injury. The maps are an iterative ongoing work-in-progress and everyone is welcome to contribute editing the OpenStreetMap data if you spot inaccuracies.
             </p>
             <p class="footnote">
                 Note that this information screen will only be shown once. In the future, you can show it again at anytime by clicking the information icon on the map.
             </p>
         </div>
         <div id="map"></div>
+        <div id="legend">
+            <button>❮</button>
+            <div class="iframe"><iframe src="https://cyclosm.org/legend.html"></iframe></div>
+        </div>
 
         <script src="js/leaflet.js"></script>
         <script src="js/leaflet-fullHash.js"></script>
@@ -130,7 +184,7 @@
         <script src="js/leaflet.restoreview.js"></script>
         <script src="js/tingle.min.js"></script>
         <script type="text/javascript">
-            var VERSION = 'v0.2';  // TODO: Bump when pushing new version in production
+            var VERSION = 'v0.3';  // TODO: Bump when pushing new version in production
 
             function storageAvailable(type) {
                 try {
@@ -154,12 +208,22 @@
             }
 
             document.addEventListener('DOMContentLoaded', function () {
+                // ============
+                // Handle modal
+                // ============
                 var modal = new tingle.modal({
                     footer: false,
                     closeMethods: ['overlay', 'button', 'escape'],
-                    closeLabel: "Close",
+                    closeLabel: "Go to map",
                 });
                 modal.setContent(document.querySelector('#modal-content').innerHTML);
+                modal.modalBoxContent.querySelectorAll('a.modalClose').forEach(function (item) {
+                    item.addEventListener('click', function (event) {
+                        console.log('ok');
+                        event.preventDefault();
+                        modal.close();
+                    });
+                });
                 if (shouldShowModalOnStartup()) {
                     modal.open();
 
@@ -168,6 +232,9 @@
                     }
                 }
 
+                // ==========
+                // Handle map
+                // ==========
                 // Available tiles definition
                 var cyclosm = L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
                     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
@@ -258,6 +325,41 @@
                 L.easyButton('fa-info', function(btn, map) {
                     modal.open();
                 }).addTo(map);
+
+                // =============
+                // Handle legend
+                // =============
+                function handleResize() {
+                    if (screen.width > 800) {
+                        document.querySelector('#map').style.right = '300px';
+                        document.querySelector('#legend .iframe').style.display = 'initial';
+                        document.querySelector('#legend').style.width = '300px';
+                        document.querySelector('#legend button').innerText = '❯';
+                    } else {
+                        document.querySelector('#map').style.right = '42px';
+                        document.querySelector('#legend .iframe').style.display = 'none';
+                        document.querySelector('#legend').style.width = '42px';
+                        document.querySelector('#legend button').innerText = '❮';
+                    }
+                }
+                handleResize();
+                window.addEventListener('resize', handleResize());
+                document.querySelector('#legend button').addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    if (document.querySelector('#legend button').innerText == '❮') {
+                        document.querySelector('#map').style.right = '300px';
+                        document.querySelector('#legend .iframe').style.display = 'initial';
+                        document.querySelector('#legend').style.width = '300px';
+                        document.querySelector('#legend button').innerText = '❯';
+                    } else {
+                        document.querySelector('#map').style.right = '42px';
+                        document.querySelector('#legend .iframe').style.display = 'none';
+                        document.querySelector('#legend').style.width = '42px';
+                        document.querySelector('#legend button').innerText = '❮';
+                    }
+                    map.invalidateSize();
+                });
             });
         </script>
         <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
