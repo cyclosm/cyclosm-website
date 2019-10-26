@@ -219,7 +219,6 @@
                 modal.setContent(document.querySelector('#modal-content').innerHTML);
                 modal.modalBoxContent.querySelectorAll('a.modalClose').forEach(function (item) {
                     item.addEventListener('click', function (event) {
-                        console.log('ok');
                         event.preventDefault();
                         modal.close();
                     });
