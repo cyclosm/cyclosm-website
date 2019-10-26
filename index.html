@@ -138,11 +138,18 @@
                     background-color: #2e4369;
                 }
             }
+
+            .error {
+                font-size: 2em;
+                text-align: center;
+                color: red;
+            }
         </style>
     </head>
     <body>
         <div id="modal-content">
             <h1 class="center" id="mainTitle">CyclOSM: OpenStreetMap-based bicycle map</h1>
+            <p class="error"><strong>26/10/2019: We are currently doing some server maintenance. Generation of new tiles may be quite slow / not active for a few days. You can follow our <a href="https://twitter.com/cyclosmOrg">Twitter account</a> for latest status.</strong></p>
             <p>
                 <a href="https://github.com/cyclosm/cyclosm-cartocss-style/">CyclOSM</a> is a bicycle-oriented map built on top of <a href="https://www.openstreetmap.org/">OpenStreetMap</a> data. It aims at providing a beautiful and practical map for cyclists, no matter their cycling habits or abilities.
             </p>
@@ -185,6 +192,7 @@
         <script src="js/tingle.min.js"></script>
         <script type="text/javascript">
             var VERSION = 'v0.3';  // TODO: Bump when pushing new version in production
+            var FORCE_MODAL = true;
 
             function storageAvailable(type) {
                 try {
@@ -201,8 +209,11 @@
             }
 
             function shouldShowModalOnStartup () {
+                if (FORCE_MODAL) {
+                    return true;
+                }
                 if (!storageAvailable('localStorage')) {
-                    return false;
+                    return true;
                 }
                 return !window.localStorage['wasModalShown'];
             }
@@ -219,7 +230,6 @@
                 modal.setContent(document.querySelector('#modal-content').innerHTML);
                 modal.modalBoxContent.querySelectorAll('a.modalClose').forEach(function (item) {
                     item.addEventListener('click', function (event) {
-                        console.log('ok');
                         event.preventDefault();
                         modal.close();
                     });
