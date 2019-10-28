@@ -228,7 +228,7 @@
                     closeLabel: "Go to map",
                 });
                 modal.setContent(document.querySelector('#modal-content').innerHTML);
-                modal.modalBoxContent.querySelectorAll('a.modalClose').forEach(function (item) {
+                [].forEach.call(modal.modalBoxContent.querySelectorAll('a.modalClose'), function (item) {
                     item.addEventListener('click', function (event) {
                         event.preventDefault();
                         modal.close();
