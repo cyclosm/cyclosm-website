@@ -250,11 +250,6 @@
                     minZoom: 0,
                     maxZoom: 20,
                 });
-                var cyclosm_relief = L.tileLayer('https://tiles.phyks.me/cyclosm/tiles/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                    minZoom: 0,
-                    maxZoom: 18,
-                });
                 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
                     minZoom: 0,
@@ -287,7 +282,6 @@
                 // Set up layers control
                 var baseMaps = {
                     "CyclOSM": cyclosm,
-                    "CyclOSM with relief<br/>(limited geo extension)": cyclosm_relief,
                     "OpenStreetMap.org": osm,
                     "OpenCycleMap": ocm,
                     "OpenTopoMap": otm,
@@ -300,7 +294,6 @@
                 // Set up hash plugin
                 var allMapLayers = {
                     'cyclosm': cyclosm,
-                    'cyclosm_relief': cyclosm_relief,
                     'openstreetmap': osm,
                     'opencyclemap': ocm,
                     'opentopomap': otm,
