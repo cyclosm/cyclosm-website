@@ -310,6 +310,7 @@
                     map.fitBounds(e.geocode.bbox);
                 })
                 geocoder.addTo(map);
+                document.querySelector('button.leaflet-control-geocoder-icon').title = 'Search'
 
                 // Set up geolocation plugin
                 L.control.locate().addTo(map);
@@ -320,13 +321,13 @@
                 // Set up edit / help / legend buttons
                 L.easyButton('fa-edit', function(btn, map) {
                     window.open('https://www.openstreetmap.org/edit' + window.location.hash, '_blank');
-                }).addTo(map);
+                }, 'Edit the map').addTo(map);
                 L.easyButton('fa-question', function(btn, map) {
                     window.open('legend.html', '_blank');
-                }).addTo(map);
+                }, 'Legend').addTo(map);
                 L.easyButton('fa-info', function(btn, map) {
                     modal.open();
-                }).addTo(map);
+                }, 'About').addTo(map);
 
                 // =============
                 // Handle legend
