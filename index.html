@@ -167,10 +167,13 @@
 
             <h2 class="center"><a class="modalClose" href="#">Let's start exploring the map!</a></h2>
             <p class="footnote">
-                CyclOSM is built on open-source and free software. The source code is available at <a href="https://github.com/cyclosm/cyclosm-cartocss-style/">Github</a> and we welcome <a href="https://github.com/cyclosm/cyclosm-cartocss-style/blob/master/CONTRIBUTING.md">contributions</a>!. The tile server hosting this demonstration is provided by <a href="https://www.openstreetmap.fr">OpenStreetMap-France</a>, many thanks to them for their support!
+                CyclOSM is built on open-source and free software. The source code is available at <a href="https://github.com/cyclosm/cyclosm-cartocss-style/">Github</a> and we welcome <a href="https://github.com/cyclosm/cyclosm-cartocss-style/blob/master/CONTRIBUTING.md">contributions</a>!. The tile server hosting this demonstration is provided by <a href="https://www.openstreetmap.fr">OpenStreetMap-France</a>, many thanks to them for their support! A Tile Map Service is available at <code>https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png</code> under a <a href="https://operations.osmfoundation.org/policies/tiles/">fairuse tile policy</a>.
             </p>
             <p class="footnote">
                 CyclOSM map is based on <a href="https://www.openstreetmap.org/">OpenStreetMap</a> data. CyclOSM is not a complete or accurate map of the world and should not be used in such a manner that deficiencies, omissions, inaccuracies or errors could result in death, loss or injury. The maps are an iterative ongoing work-in-progress and everyone is welcome to contribute editing the OpenStreetMap data if you spot inaccuracies.
+            </p>
+            <p class="footnote">
+                OpenStreetMap data should be replicated in near realtime in the CyclOSM style, the current delay between OpenStreetMap data and our maintained version can be seen <a href="https://munin.openstreetmap.fr/osm11.openstreetmap.fr/osm165.openstreetmap.fr/osm_replication_lag_osm2pgsql.html">here</a>. Tiles below zoom level 12 are pre-generated on a weekly basis, tiles at higher zooms are live-generated and should always use the latest OpenStreetMap data we have.
             </p>
             <p class="footnote">
                 Note that this information screen will only be shown once. In the future, you can show it again at anytime by clicking the information icon on the map.
@@ -190,7 +193,7 @@
         <script src="js/leaflet.restoreview.js"></script>
         <script src="js/tingle.min.js"></script>
         <script type="text/javascript">
-            var VERSION = 'v0.3.1';  // TODO: Bump when pushing new version in production
+            var VERSION = 'v0.3.2';  // TODO: Bump when pushing new version in production
             var FORCE_MODAL = false;
 
             function storageAvailable(type) {
@@ -310,6 +313,7 @@
                     map.fitBounds(e.geocode.bbox);
                 })
                 geocoder.addTo(map);
+                document.querySelector('button.leaflet-control-geocoder-icon').title = 'Search'
 
                 // Set up geolocation plugin
                 L.control.locate().addTo(map);
@@ -320,13 +324,13 @@
                 // Set up edit / help / legend buttons
                 L.easyButton('fa-edit', function(btn, map) {
                     window.open('https://www.openstreetmap.org/edit' + window.location.hash, '_blank');
-                }).addTo(map);
+                }, 'Edit the map').addTo(map);
                 L.easyButton('fa-question', function(btn, map) {
                     window.open('legend.html', '_blank');
-                }).addTo(map);
+                }, 'Legend').addTo(map);
                 L.easyButton('fa-info', function(btn, map) {
                     modal.open();
-                }).addTo(map);
+                }, 'About').addTo(map);
 
                 // =============
                 // Handle legend
