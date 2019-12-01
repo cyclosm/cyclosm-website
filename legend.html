@@ -127,12 +127,8 @@
         <h3>Highway infrastructure</h3>
         <table>
             <tr>
-                <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #c0ccc4; opacity: 0.5; border-top: 1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;"></span></td>
-                <td>Motorway</td>
-            </tr>
-            <tr>
-                <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #c0ccc4; opacity: 0.5; border-top: 1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;"></span></td>
-                <td>Trunk</td>
+                <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f4c3c3; opacity: 0.5; border-top: 1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;"></span></td>
+                <td>Motorway, Trunk</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f4dfc3; opacity: 0.5; border-top: 1px solid #d8b267; border-bottom: 1px solid #d8b267;"></span></td>
@@ -175,6 +171,10 @@
                 <td>Walking speed or no motor vehicle access</td>
             </tr>
             <tr>
+                <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #c0ccc4; opacity: 0.5; border-top: 1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;"></span></td>
+                <td>Bicycle not allowed</td>
+            </tr>
+            <tr>
                 <td><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #5d8556 2px; vertical-align: middle;"></span></td>
                 <td>Footway</td>
             </tr>
@@ -210,7 +210,7 @@
                         </svg>
                     </span>
                 </td>
-                <td>Very bad surface (ok mountain bikes)</td>
+                <td>Very bad surface (ok for mountain bikes)</td>
             </tr>
         </table>
 
@@ -322,8 +322,8 @@
             </tr>
 
             <tr>
-                <td><span style="display: inline-block; width: 0.5em; height: 0.5em; background-color: yellow; border-radius: 50%;"></span></td>
-                <td>Proctected bicycle parking</td>
+                <td><img src="symbols/amenity/bicycle_parking_secured_covered.svg"/></td>
+                <td>Covered and proctected bicycle parking</td>
             </tr>
 
             <tr>
@@ -475,20 +475,28 @@
                 <td><img src="symbols/openstreetmap-carto/natural/cave.svg"/></td>
                 <td>Cave</td>
             </tr>
-
             <tr>
                 <td><img src="symbols/openstreetmap-carto/natural/peak.svg"/></td>
                 <td>Peak</td>
             </tr>
-
             <tr>
                 <td><img src="symbols/openstreetmap-carto/natural/saddle.svg"/></td>
                 <td>Saddle</td>
             </tr>
-
             <tr>
                 <td><img src="symbols/openstreetmap-carto/waterfall.svg"/></td>
                 <td>Waterfall</td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="display: inline-block; height: 1.5em; width: 2em;">
+                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <circle cx="50%" cy="50%" r="8" fill="green" opacity="0.3" />
+                            <circle cx="50%" cy="50%" r="2" fill="#b27f36" />
+                        </svg>
+                    </span>
+                </td>
+                <td>Tree</td>
             </tr>
         </table>
 
@@ -604,8 +612,42 @@
         <h3>Miscellaneous</h3>
         <table>
             <tr>
+                <td><img src="symbols/openstreetmap-carto/highway/traffic_light.13.svg"/></td>
+                <td>Traffic light</td>
+            </tr>
+            <tr>
+                <td><img src="symbols/amenity/traffic_calming.svg"/></td>
+                <td>Traffic calming</td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="margin: auto; display: block; width: 10px; height: 10px; background-color: #0092da; -webkit-mask: url(symbols/osmfr/crossing.svg) no-repeat center; mask: url(symbols/osmfr/crossing.svg) no-repeat center; -webkit-mask-size: contain; mask-size: contain"></span>
+                </td>
+                <td>Bicycle zebra crossing</td>
+            </tr>
+            <tr>
+                <td><img src="symbols/openstreetmap-carto/highway/ford.svg"/></td>
+                <td>Ford</td>
+            </tr>
+            <tr>
+                <td><img src="symbols/openstreetmap-carto/highway/elevator.12.svg"/></td>
+                <td>Elevator (blue if bicycle-friendly)</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span style="margin: auto; display: block; width: 10px; height: 10px; background-color: #555; -webkit-mask: url(symbols/openstreetmap-carto/square.svg) no-repeat center; mask: url(symbols/openstreetmap-carto/square.svg) no-repeat center; -webkit-mask-size: contain; mask-size: contain"></span>
+                    <span style="font-family: sans-serif; color: #555; font-weight: 500;">Foo</span>
+                </td>
+                <td>Train station</td>
+            </tr>
+            <tr>
                 <td><img src="symbols/openstreetmap-carto/aerodrome.12.svg"/></td>
                 <td>Aerodrome</td>
+            </tr>
+            <tr>
+                <td><img src="symbols/openstreetmap-carto/helipad.16.svg"/></td>
+                <td>Helipad</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/bunker.svg"/></td>
@@ -624,16 +666,8 @@
                 <td>Cross</td>
             </tr>
             <tr>
-                <td><img src="symbols/openstreetmap-carto/highway/elevator.12.svg"/></td>
-                <td>Elevator (blue if bicycle-friendly)</td>
-            </tr>
-            <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/fountain.svg"/></td>
                 <td>Fountain</td>
-            </tr>
-            <tr>
-                <td><img src="symbols/openstreetmap-carto/helipad.16.svg"/></td>
-                <td>Helipad</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/lighthouse.svg"/></td>
@@ -642,32 +676,6 @@
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/storage_tank.svg"/></td>
                 <td>Storage tank</td>
-            </tr>
-            <tr>
-                <td><img src="symbols/amenity/traffic_calming.svg"/></td>
-                <td>Traffic calming</td>
-            </tr>
-            <tr>
-                <td>
-                    <span style="display: inline-block; height: 1.5em; width: 2em;">
-                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                            <circle cx="50%" cy="50%" r="8" fill="green" opacity="0.3" />
-                            <circle cx="50%" cy="50%" r="2" fill="#b27f36" />
-                        </svg>
-                    </span>
-                </td>
-                <td>Tree</td>
-            </tr>
-            <tr>
-                <td>
-                    <span style="margin: auto; display: block; width: 10px; height: 10px; background-color: #0092da; -webkit-mask: url(symbols/openstreetmap-carto/square.svg) no-repeat center; mask: url(symbols/openstreetmap-carto/square.svg) no-repeat center; -webkit-mask-size: contain; mask-size: contain"></span>
-                    <span style="font-family: sans-serif; color: #0092da; font-weight: 500;">Foo</span>
-                </td>
-                <td>Train station</td>
-            </tr>
-            <tr>
-                <td><img src="symbols/openstreetmap-carto/highway/traffic_light.13.svg"/></td>
-                <td>Traffic light</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/water_tower.svg"/></td>
@@ -680,12 +688,6 @@
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/windmill.svg"/></td>
                 <td>Wind mill</td>
-            </tr>
-            <tr>
-                <td>
-                    <span style="margin: auto; display: block; width: 10px; height: 10px; background-color: #0092da; -webkit-mask: url(symbols/osmfr/crossing.svg) no-repeat center; mask: url(symbols/osmfr/crossing.svg) no-repeat center; -webkit-mask-size: contain; mask-size: contain"></span>
-                </td>
-                <td>Bicycle zebra crossing</td>
             </tr>
         </table>
 
