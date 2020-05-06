@@ -277,6 +277,11 @@
                     minZoom: 0,
                     maxZoom: 18,
                 });
+                var cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm-lite/{z}/{x}/{y}.png', {
+                    attribution: 'CyclOSM Lite',
+                    minZoom: 11,
+                    maxZoom: 20,
+                });
                 var waymarked_trails = L.tileLayer('https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
                     attribution: '<a href="Trails">https://cycling.waymarkedtrails.org/</a>',
                     minZoom: 0,
@@ -300,6 +305,7 @@
                 };
                 var overlayMaps = {
                     "Waymarked Trails": waymarked_trails,
+                    "CyclOSM Lite": cyclosm_lite
                 };
                 L.control.layers(baseMaps, overlayMaps, { collapsed: true }).addTo(map);
 
@@ -310,6 +316,7 @@
                     'opencyclemap': ocm,
                     'opentopomap': otm,
                     'waymarkedtrails': waymarked_trails,
+                    'cyclosmlite': cyclosm_lite,
                 };
                 L.hash(map, allMapLayers);
 
