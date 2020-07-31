@@ -262,6 +262,11 @@
                     minZoom: 0,
                     maxZoom: 20,
                 });
+                var cyclosm_live = L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                    minZoom: 0,
+                    maxZoom: 20,
+                });
                 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
                     minZoom: 0,
@@ -304,6 +309,7 @@
                 // Set up layers control
                 var baseMaps = {
                     "CyclOSM": cyclosm,
+                    "CyclOSM (Live)": cyclosm_live,
                     "OpenStreetMap.org": osm,
                     "OpenCycleMap": ocm,
                     "OpenTopoMap": otm,
@@ -318,6 +324,7 @@
                 // Set up hash plugin
                 var allMapLayers = {
                     'cyclosm': cyclosm,
+                    'cyclosm_live': cyclosm_live,
                     'piano': piano,
                     'openstreetmap': osm,
                     'opencyclemap': ocm,
