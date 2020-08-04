@@ -144,6 +144,10 @@
                 text-align: center;
                 color: red;
             }
+
+            .leaflet-control .fa {
+                font-size: 14px;
+            }
         </style>
     </head>
     <body>
@@ -360,7 +364,10 @@
                 // Add a scale
                 L.control.scale().addTo(map);
 
-                // Set up edit / help / legend buttons
+                // Set up routing / edit / help / legend buttons
+                L.easyButton('fa-route', function(btn, map) {
+                    window.open('http://brouter.de/brouter-web/' + window.location.hash, '_blank');
+                }, 'Edit the map').addTo(map);
                 L.easyButton('fa-edit', function(btn, map) {
                     window.open('https://www.openstreetmap.org/edit' + window.location.hash, '_blank');
                 }, 'Edit the map').addTo(map);
