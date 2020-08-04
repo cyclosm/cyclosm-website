@@ -389,19 +389,16 @@
                     } else {
                         shouldLegendOpen = false;
                     }
-                    console.log(shouldLegendOpen);
                     if (storageAvailable('localStorage') && window.localStorage.isLegendOpen !== undefined) {
                         shouldLegendOpen = JSON.parse(window.localStorage.isLegendOpen);
                     }
 
                     if (shouldLegendOpen) {
-                        console.log('open');
                         document.querySelector('#map').style.right = '300px';
                         document.querySelector('#legend .iframe').style.display = 'initial';
                         document.querySelector('#legend').style.width = '300px';
                         document.querySelector('#legend button').innerText = '❯';
                     } else {
-                        console.log('close');
                         document.querySelector('#map').style.right = '42px';
                         document.querySelector('#legend .iframe').style.display = 'none';
                         document.querySelector('#legend').style.width = '42px';
