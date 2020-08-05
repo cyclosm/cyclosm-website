@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "A bicycle-oriented map for every cyclist, based on OpenStreetMap data.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "./images/favicon-228.png",
+      "sizes": "228x228",
+      "type": "image/png"
+    }
+  ],
+  "name": "CyclOSM",
+  "short_name": "CyclOSM",
+  "start_url": "/index.html"
+}

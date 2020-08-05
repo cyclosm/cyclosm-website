@@ -21,6 +21,7 @@
         <link rel="icon" type="image/png" sizes="228x228" href="https://www.cyclosm.org/images/favicon-228.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.cyclosm.org/images/favicon-32.png">
         <link rel="shortcut icon" href="https://www.cyclosm.org/images/favicon.ico">
+        <link rel="manifest" href="./manifest.webmanifest">
 
         <title>CyclOSM: OpenStreetMap-based bicycle map</title>
 
@@ -214,6 +215,11 @@
         <script type="text/javascript">
             var VERSION = 'v0.3.6';  // TODO: Bump when pushing new version in production
             var FORCE_MODAL = false;
+
+            // Register service worker for PWA
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js');
+            };
 
             function storageAvailable(type) {
                 try {
