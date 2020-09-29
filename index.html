@@ -311,6 +311,11 @@
                     minZoom: 11,
                     maxZoom: 20,
                 });
+                var cyclosm_be = L.tileLayer('https://{s}.tiles.champs-libres.be/cyclosm/{z}/{x}/{y}.png', {
+                    attribution: 'MNT 2013-2014 &copy; SPW; DHM Vlaanderen II &copy; Vlaanderen. Tiles courtesy of <a href="https://www.champs-libres.coop/blog/post/2020-09-17-cyclosm/">Champs-Libres</a>.',
+                    minZoom: 11,
+                    maxZoom: 20,
+                });
                 var waymarked_trails = L.tileLayer('https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
                     attribution: '<a href="https://cycling.waymarkedtrails.org/">https://cycling.waymarkedtrails.org/</a>',
                     minZoom: 0,
@@ -329,6 +334,7 @@
                 var baseMaps = {
                     "CyclOSM": cyclosm,
                     "CyclOSM (Live)": cyclosm_live,
+                    "CyclOSM (better for BE)": cyclosm_be,
                     "OpenStreetMap.org": osm,
                     "OpenCycleMap": ocm,
                     "OpenTopoMap": otm,
@@ -344,6 +350,7 @@
                 var allMapLayers = {
                     'cyclosm': cyclosm,
                     'cyclosm_live': cyclosm_live,
+                    'cyclosm_be': cyclosm_be,
                     'piano': piano,
                     'openstreetmap': osm,
                     'opencyclemap': ocm,
