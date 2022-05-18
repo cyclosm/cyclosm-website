@@ -21,6 +21,8 @@
         <link rel="icon" type="image/png" sizes="228x228" href="https://www.cyclosm.org/images/favicon-228.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.cyclosm.org/images/favicon-32.png">
         <link rel="shortcut icon" href="https://www.cyclosm.org/images/favicon.ico">
+        <script src="js/banana-i18n.js"></script>
+        <script src="js/legend-i18n.js"></script>
 
         <title>CyclOSM - Legend</title>
 
@@ -55,17 +57,17 @@
         </style>
     </head>
     <body>
-        <h2>Legend</h2>
+        <h2 class="i18n" data-i18n="legend">Legend</h2>
 
-        <h3>Bicycle infrastructure</h3>
+        <h3 class="i18n" data-i18n="bike-infra">Bicycle infrastructure</h3>
         <table>
             <tr>
                 <td><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #0000ce 3px; vertical-align: middle;"></span></td>
-                <td>Separate cycleway</td>
+                <td class="i18n" data-i18n="separate-cycleway">Separate cycleway</td>
             </tr>
             <tr>
                 <td><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #0060ff 3px; vertical-align: middle;"></span></td>
-                <td>Path designated for bicycles.</td>
+                <td class="i18n" data-i18n="path-bikes">Path designated for bicycles.</td>
             </tr>
             <tr>
                 <td>
@@ -77,7 +79,7 @@
                         </svg>
                     </span>
                 </td>
-                <td>Cycle track on this side of the street</td>
+                <td class="i18n" data-i18n="cycle-track">Cycle track on this side of the street</td>
             </tr>
             <tr>
                 <td>
@@ -89,7 +91,7 @@
                         </svg>
                     </span>
                 </td>
-                <td>Cycle lane on this side of the street</td>
+                <td class="i18n" data-i18n="cycle-lane">Cycle lane on this side of the street</td>
             </tr>
             <tr>
                 <td>
@@ -101,11 +103,11 @@
                         </svg>
                     </span>
                 </td>
-                <td>Shared lane (with buses or other motor vehicles) on this side of the street <br/> Road shoulder open to bikes</td>
+                <td class="i18n" data-i18n="shared-lane">Shared lane (with buses or other motor vehicles) on this side of the street <br/> Road shoulder open to bikes</td>
             </tr>
             <tr>
                 <td><img src="symbols/oneway-cycle.svg"/></td>
-                <td>Double way streets for bikes (one way for cars)</td>
+                <td class="i18n" data-i18n="double-way-bikes">Double way streets for bikes (one way for cars)</td>
             </tr>
             <tr>
                 <td>
@@ -118,7 +120,7 @@
                         </svg>
                     </span>
                 </td>
-                <td>Bicycle designated road</td>
+                <td class="i18n" data-i18n="bike-road">Bicycle designated road</td>
             </tr>
             <tr>
                 <td>
@@ -129,79 +131,79 @@
                         </svg>
                     </span>
                 </td>
-                <td>Steps with a bicycle-friendly ramp</td>
+                <td class="i18n" data-i18n="steps-bike">Steps with a bicycle-friendly ramp</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #0060ff; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888888;"></span></td>
-                <td>Cycle streets</td>
+                <td class="i18n" data-i18n="cycle-streets">Cycle streets</td>
             </tr>
         </table>
 
-        <h3>Highway infrastructure</h3>
+        <h3 class="i18n" data-i18n="highway-infra">Highway infrastructure</h3>
         <table>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #d4d4d4; opacity: 0.5; border-top: 1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;"></span></td>
-                <td>Motorway, Trunk (default)</td>
+                <td class="i18n" data-i18n="motorway-default">Motorway, Trunk (default)</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f4c3c3; opacity: 0.5; border-top: 1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;"></span></td>
-                <td>Motorway, Trunk (bicycle explicitly allowed)</td>
+                <td class="i18n" data-i18n="motorway-explicit">Motorway, Trunk (bicycle explicitly allowed)</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f4dfc3; opacity: 0.5; border-top: 1px solid #d8b267; border-bottom: 1px solid #d8b267;"></span></td>
-                <td>Primary</td>
+                <td class="i18n" data-i18n="primary">Primary</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f6f8d2; opacity: 0.5; border-top: 1px solid #b1bb5d; border-bottom: 1px solid #b1bb5d;"></span></td>
-                <td>Secondary</td>
+                <td class="i18n" data-i18n="secondary">Secondary</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f6f6f6; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888;"></span></td>
-                <td>Tertiary</td>
+                <td class="i18n" data-i18n="tertiary">Tertiary</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #f6f6f6; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888;"></span></td>
-                <td>Standard</td>
+                <td class="i18n" data-i18n="standard">Standard</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="box-sizing: border-box; display: inline-block; height: 1em; width: 2em; background-color: #bbffba; opacity: 0.5; border-top: 3px solid #bbb; border-bottom: 3px solid #bbb;"></span></td>
-                <td>Living street</td>
+                <td class="i18n" data-i18n="living-street">Living street</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="box-sizing: border-box; display: inline-block; height: 1em; width: 2em; background-color: #ddffba; opacity: 0.5; border-top: 4px solid #bbb; border-bottom: 4px solid #bbb;"></span></td>
-                <td>Pedestrian</td>
+                <td class="i18n" data-i18n="pedestrian">Pedestrian</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #aff1f1; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888;"></span></td>
-                <td>30 km/h</td>
+                <td class="i18n" data-i18n="30-km">30 km/h</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #bbffba; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888;"></span></td>
-                <td>20 km/h</td>
+                <td class="i18n" data-i18n="20-km">20 km/h</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #62ff96; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888;"></span></td>
-                <td>No motor vehicle access</td>
+                <td class="i18n" data-i18n="no-motor">No motor vehicle access</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #d4d4d4; opacity: 0.5; border-top: 1px solid #888; border-bottom: 1px solid #888;"></span></td>
-                <td>Bicycle not allowed</td>
+                <td class="i18n" data-i18n="bike-not-allowed">Bicycle not allowed</td>
             </tr>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #114021 5px; vertical-align: middle;"></span></td>
-                <td>Track</td>
+                <td class="i18n" data-i18n="track">Track</td>
             </tr>
             <tr>
                 <td><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #007360 2px; vertical-align: middle;"></span></td>
-                <td>Path</td>
+                <td class="i18n" data-i18n="path">Path</td>
             </tr>
             <tr>
                 <td><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #7a5b36 2px; vertical-align: middle;"></span></td>
-                <td>Footway</td>
+                <td class="i18n" data-i18n="footway">Footway</td>
             </tr>
             <tr>
                 <td><span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #741e18 2px; vertical-align: middle;"></span></td>
-                <td>Bridleway</td>
+                <td class="i18n" data-i18n="bridleway">Bridleway</td>
             </tr>
             <tr>
               <td>
@@ -222,7 +224,7 @@
                         <line x1="0%" x2="100%" y1="70%" y2="70%" stroke-linecap="butt" stroke="#999" stroke-width="5%"/>
                     </svg>
                 </span>
-                Bad surface (ok for cyclocross/trekking/gravel bikes)
+                <span class="i18n" data-i18n="bad-surface">Bad surface (ok for cyclocross/trekking/gravel bikes)</span>
               </td>
             </tr>
             <tr>
@@ -244,7 +246,7 @@
                           <line x1="0%" x2="100%" y1="70%" y2="70%" stroke-linecap="butt" stroke="#999" stroke-width="5%"/>
                       </svg>
                   </span>
-                  Very bad surface (ok for mountain bikes)
+                  <span class="i18n" data-i18n="very-bad-surface">Very bad surface (ok for mountain bikes)</span>
               </td>
             </tr>
             <tr>
@@ -257,11 +259,11 @@
                   </svg>
                 </span>
               </td>
-              <td>Unknown surface quality</td>
+              <td class="i18n" data-i18n="unknown-quality">Unknown surface quality</td>
             </tr>
         </table>
 
-        <h3>Mountain Bike</h3>
+        <h3 class="i18n" data-i18n="MTB">Mountain Bike</h3>
         <table>
           <tr>
             <td>
@@ -272,7 +274,7 @@
                   <line x1="11%" x2="100%" y1="50%" y2="50%" stroke-linecap="butt" stroke-dasharray="1,8" stroke="#2076ff" stroke-width="30%"/>
                 </svg>
               </span></td>
-            <td><a href="http://www.singletrail-skala.de">STS</a> 0</td>
+            <td class="i18n" data-i18n="STS-0"><a href="http://www.singletrail-skala.de">STS</a> 0</td>
           </tr>
           <tr>
             <td>
@@ -283,7 +285,7 @@
                   <line x1="11%" x2="100%" y1="50%" y2="50%" stroke-linecap="butt" stroke-dasharray="1,1,1,8" stroke="#2076ff" stroke-width="30%"/>
                 </svg>
               </span></td>
-            <td>STS 1</td>
+            <td class="i18n" data-i18n="STS-1">STS 1</td>
           </tr>
           <tr>
             <td>
@@ -294,7 +296,7 @@
                   <line x1="11%" x2="100%" y1="50%" y2="50%" stroke-linecap="butt" stroke-dasharray="1,8" stroke="#FF0000" stroke-width="30%"/>
                 </svg>
               </span></td>
-            <td>STS 2</td>
+            <td class="i18n" data-i18n="STS-2">STS 2</td>
           </tr>
           <tr>
             <td>
@@ -305,7 +307,7 @@
                   <line x1="11%" x2="100%" y1="50%" y2="50%" stroke-linecap="butt" stroke-dasharray="1,8" stroke="#000" stroke-width="30%"/>
                 </svg>
               </span></td>
-            <td>STS 3</td>
+            <td class="i18n" data-i18n="STS-3">STS 3</td>
           </tr>
           <tr>
             <td>
@@ -316,7 +318,7 @@
                   <line x1="11%" x2="100%" y1="50%" y2="50%" stroke-linecap="butt" stroke-dasharray="1,1,1,8" stroke="#000" stroke-width="30%"/>
                 </svg>
               </span></td>
-            <td>STS 4</td>
+            <td class="i18n" data-i18n="STS-4">STS 4</td>
           </tr>
           <tr>
             <td>
@@ -327,7 +329,7 @@
                   <line x1="11%" x2="100%" y1="50%" y2="50%" stroke-linecap="butt" stroke-dasharray="1,1,1,1,1,8" stroke="#000" stroke-width="30%"/>
                 </svg>
               </span></td>
-            <td>STS 5</td>
+            <td class="i18n" data-i18n="STS-5">STS 5</td>
           </tr>
 
           <tr>
@@ -345,7 +347,7 @@
                 </svg>
               </span>
             </td>
-            <td><a href="https://www.imba.com/resource/trail-difficulty-rating-system">IMBA</a> Easiest (white circle)</td>
+            <td class="i18n" data-i18n="IMBA-easiest"><a href="https://www.imba.com/resource/trail-difficulty-rating-system">IMBA</a> Easiest (white circle)</td>
             <tr>
               <td>
                 <span >
@@ -361,7 +363,7 @@
                   </svg>
                 </span>
               </td>
-              <td>IMBA Easy (green circle)</td>
+              <td class="i18n" data-i18n="IMBA-easy">IMBA Easy (green circle)</td>
             </tr>
             <tr>
               <td>
@@ -378,7 +380,7 @@
                   </svg>
                 </span>
               </td>
-              <td>IMBA More Difficult (blue square)</td>
+              <td class="i18n" data-i18n="IMBA-more-difficult">IMBA More Difficult (blue square)</td>
             </tr>
             <tr>
               <td>
@@ -395,7 +397,7 @@
                   </svg>
                 </span>
               </td>
-              <td>IMBA Very Difficult (black diamond)</td>
+              <td class="i18n" data-i18n="IMBA-very-difficult">IMBA Very Difficult (black diamond)</td>
             </tr>
             <tr>
               <td>
@@ -412,296 +414,296 @@
                   </svg>
                 </span>
               </td>
-              <td>IMBA Extremely Difficult (double black diamond)</td>
+              <td class="i18n" data-i18n="IMBA-x-difficult">IMBA Extremely Difficult (double black diamond)</td>
             </tr>
           </table>
 
-        <h3>Bicycle routes</h3>
+        <h3 class="i18n" data-i18n="bike-routes">Bicycle routes</h3>
         <table>
             <tr>
                 <td style="width: 2em;"><span style="display: inline-block; height: 1em; width: 2em; background-color: #ff00ff; opacity: 0.5;"></span></td>
-                <td>International bike route</td>
+                <td class="i18n" data-i18n="inter-bike-route">International bike route</td>
             </tr>
 
             <tr>
                 <td><span style="display: inline-block; height: 1em; width: 2em; background-color: #aa00ff; opacity: 0.5;"></span></td>
-                <td>National bike route</td>
+                <td class="i18n" data-i18n="national-bike-route">National bike route</td>
             </tr>
 
             <tr>
                 <td><span style="display: inline-block; height: 1em; width: 2em; background-color: #5500ff; opacity: 0.5;"></span></td>
-                <td>Regional bike route</td>
+                <td class="i18n" data-i18n="regional-bike-route">Regional bike route</td>
             </tr>
 
             <tr>
                 <td><span style="display: inline-block; height: 1em; width: 2em; background-color: #0000ff; opacity: 0.5;"></span></td>
-                <td>Local bike route</td>
+                <td class="i18n" data-i18n="local-bike-route">Local bike route</td>
             </tr>
 
             <tr>
                 <td><span style="display: inline-block; height: 1em; width: 2em; background-color: #d15000; opacity: 0.5;"></span></td>
-                <td>Mountain bike route</td>
+                <td class="i18n" data-i18n="MTB-route">Mountain bike route</td>
             </tr>
             <tr>
                 <td><span style="display: inline-block; height: 2em; width: 2em; background: url('symbols/shields/rcn-junction_1x1.svg') no-repeat; background-position: center; padding-top: 1em; color: white; font-family: sans-serif; font-weight: 500;">16</span></td>
-                <td>Numbered cycle junction</td>
+                <td class="i18n" data-i18n="num-cycle-junction">Numbered cycle junction</td>
             </tr>
         </table>
 
-        <h3>Bicycle-specific amenities</h3>
+        <h3 class="i18n" data-i18n="bike-amenities">Bicycle-specific amenities</h3>
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/bicycle_repair_station.svg"/></td>
-                <td>Bicycle repair station</td>
+                <td class="i18n" data-i18n="bike-repair-station">Bicycle repair station</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osmandapp/amenity/compressed_air.svg"/></td>
-                <td>Compressed air</td>
+                <td class="i18n" data-i18n="compressed-air">Compressed air</td>
             </tr>
 
             <tr>
                 <td><span style="display: inline-block; width: 0.5em; height: 0.5em; background-color: blue; border-radius: 50%;"></span></td>
-                <td>Bicycle parking</td>
+                <td class="i18n" data-i18n="bike-parking">Bicycle parking</td>
             </tr>
 
             <tr>
                 <td><span style="display: inline-block; width: 0.5em; height: 0.5em; background-color: #0050ff; border-radius: 50%;"></span></td>
-                <td>Shared bicycle / motorcycle parking</td>
+                <td class="i18n" data-i18n="bike/motorcycle-parking">Shared bicycle / motorcycle parking</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/amenity/bicycle_parking_secured_covered.svg"/></td>
-                <td>Covered and proctected bicycle parking</td>
+                <td class="i18n" data-i18n="covered-bike-parking">Covered and proctected bicycle parking</td>
             </tr>
 
 			<tr>
                 <td><img src="symbols/amenity/bicycle_parking_notlockable.svg"/></td>
-                <td>Floor bicycle parking</td>
+                <td class="i18n" data-i18n="floor-bike-parking">Floor bicycle parking</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/bicycle_rental_11.svg"/></td>
-                <td>Bicycle rental</td>
+                <td class="i18n" data-i18n="bike-rental">Bicycle rental</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/bicycle_11.svg"/></td>
-                <td>Bicycle shop</td>
+                <td class="i18n" data-i18n="bike-shop">Bicycle shop</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/amenity/bicycle_tube_vending.svg"/></td>
-                <td>Inner Tube Vending Machine</td>
+                <td class="i18n" data-i18n="Inner-tube-shop">Inner Tube Vending Machine</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/amenity/bicycle_monitoring_station.svg"/></td>
-                <td>Bicycle counter</td>
+                <td class="i18n" data-i18n="bike-counter">Bicycle counter</td>
             </tr>
         </table>
 
-        <h3>First aid</h3>
+        <h3 class="i18n" data-i18n="first-aid">First aid</h3>
         <table>
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/hospital_11.svg"/></td>
-                <td>Hospital</td>
+                <td class="i18n" data-i18n="hospital">Hospital</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/police.svg"/></td>
-                <td>Police</td>
+                <td class="i18n" data-i18n="police">Police</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/pharmacy.svg"/></td>
-                <td>Pharmacy</td>
+                <td class="i18n" data-i18n="pharmacy">Pharmacy</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/drinking_water_full.svg"/></td>
-                <td>Drinking water</td>
+                <td class="i18n" data-i18n="drinking-water">Drinking water</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/toilets_11.svg"/></td>
-                <td>Toilets</td>
+                <td class="i18n" data-i18n="toilets">Toilets</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/shelter_11.svg"/></td>
-                <td>Shelter</td>
+                <td class="i18n" data-i18n="shelter">Shelter</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/emergency_phone.svg"/></td>
-                <td>Emergency phone</td>
+                <td class="i18n" data-i18n="emergency-phone">Emergency phone</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/public_bath.svg"/></td>
-                <td>Public bath</td>
+                <td class="i18n" data-i18n="public-bath">Public bath</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/shower.svg"/></td>
-                <td>Shower</td>
+                <td class="i18n" data-i18n="shower">Shower</td>
             </tr>
         </table>
 
-        <h3>Shops</h3>
+        <h3 class="i18n" data-i18n="shops">Shops</h3>
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/supermarket.svg"/></td>
-                <td>Supermarket</td>
+                <td class="i18n" data-i18n="supermarket">Supermarket</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/convenience.svg"/></td>
-                <td>Convenience shop</td>
+                <td class="i18n" data-i18n="convenience-shop">Convenience shop</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/post_office_11.svg"/></td>
-                <td>Post office</td>
+                <td class="i18n" data-i18n="post-office">Post office</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/bar.svg"/></td>
-                <td>Bar</td>
+                <td class="i18n" data-i18n="bar">Bar</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/cafe_11.svg"/></td>
-                <td>Café</td>
+                <td class="i18n" data-i18n="café">Café</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/internet_cafe.svg"/></td>
-                <td>Internet cafe</td>
+                <td class="i18n" data-i18n="internet-cafe">Internet cafe</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/fast_food.svg"/></td>
-                <td>Fast-food</td>
+                <td class="i18n" data-i18n="fast-food">Fast-food</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/pub_11.svg"/></td>
-                <td>Pub</td>
+                <td class="i18n" data-i18n="pub">Pub</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/restaurant.svg"/></td>
-                <td>Restaurant</td>
+                <td class="i18n" data-i18n="restaurant">Restaurant</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/art.svg"/></td>
-                <td>Art</td>
+                <td class="i18n" data-i18n="art">Art</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/bakery.svg"/></td>
-                <td>Bakery</td>
+                <td class="i18n" data-i18n="bakery">Bakery</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/biergarten.svg"/></td>
-                <td>Biergarten</td>
+                <td class="i18n" data-i18n="biergarten">Biergarten</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/beverages.svg"/></td>
-                <td>Beverages</td>
+                <td class="i18n" data-i18n="beverages">Beverages</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/confectionery.svg"/></td>
-                <td>Confectionery</td>
+                <td class="i18n" data-i18n="confectionery">Confectionery</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/greengrocer.svg"/></td>
-                <td>Green grocer</td>
+                <td class="i18n" data-i18n="green-grocer">Green grocer</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/shop/ice_cream.svg"/></td>
-                <td>Ice cream</td>
+                <td class="i18n" data-i18n="ice-cream">Ice cream</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/osm-bright-gl-style/amenities/post_box_11.svg"/></td>
-                <td>Post box</td>
+                <td class="i18n" data-i18n="Post-box">Post box</td>
             </tr>
         </table>
 
-        <h3>Housing</h3>
+        <h3 class="i18n" data-i18n="housing">Housing</h3>
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/apartment.svg"></td>
-                <td>Apartment</td>
+                <td class="i18n" data-i18n="apartment">Apartment</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/camping.svg"></td>
-                <td>Camping</td>
+                <td class="i18n" data-i18n="camping">Camping</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/caravan_park.svg"></td>
-                <td>Caravan park</td>
+                <td class="i18n" data-i18n="caravan-park">Caravan park</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/chalet.svg"></td>
-                <td>Chalet</td>
+                <td class="i18n" data-i18n="chalet">Chalet</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/guest_house.svg"></td>
-                <td>Guest house</td>
+                <td class="i18n" data-i18n="guest-house">Guest house</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/hostel.svg"/></td>
-                <td>Hostel</td>
+                <td class="i18n" data-i18n="hostel">Hostel</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/hotel.svg"/></td>
-                <td>Hotel</td>
+                <td class="i18n" data-i18n="hotel">Hotel</td>
             </tr>
 
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/motel.svg"/></td>
-                <td>Motel</td>
+                <td class="i18n" data-i18n="motel">Motel</td>
             </tr>
         </table>
 
-        <h3>Natural</h3>
+        <h3 class="i18n" data-i18n="natural">Natural</h3>
 
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/natural/cave.svg"/></td>
-                <td>Cave</td>
+                <td class="i18n" data-i18n="cave">Cave</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/natural/peak.svg"/></td>
-                <td>Peak</td>
+                <td class="i18n" data-i18n="peak">Peak</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/natural/saddle.svg"/></td>
-                <td>Moutain Pass / Saddle</td>
+                <td class="i18n" data-i18n="saddle">Moutain Pass / Saddle</td>
             </tr>
 			<tr>
                 <td><img src="symbols/openstreetmap-carto/spring.svg" style="object-fit: none; object-position: 12px -4px; width: 32px; height: 32px"/></td>
-                <td>Spring</td>
+                <td class="i18n" data-i18n="spring">Spring</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/waterfall.svg"/></td>
-                <td>Waterfall</td>
+                <td class="i18n" data-i18n="waterfall">Waterfall</td>
             </tr>
             <tr>
                 <td>
@@ -712,146 +714,146 @@
                         </svg>
                     </span>
                 </td>
-                <td>Tree</td>
+                <td class="i18n" data-i18n="tree">Tree</td>
             </tr>
         </table>
 
-        <h3>Tourism</h3>
+        <h3 class="i18n" data-i18n="tourism">Tourism</h3>
 
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/archaeological_site.svg"/></td>
-                <td>Archæological site</td>
+                <td class="i18n" data-i18n="arch-site">Archæological site</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/bench.svg"/></td>
-                <td>Bench</td>
+                <td class="i18n" data-i18n="bench">Bench</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/castle.svg"/></td>
-                <td>Castle</td>
+                <td class="i18n" data-i18n="castle">Castle</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/fort.svg"/></td>
-                <td>Fort</td>
+                <td class="i18n" data-i18n="fort">Fort</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/fortress.svg"/></td>
-                <td>Fortress</td>
+                <td class="i18n" data-i18n="fortress">Fortress</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/information.svg"/></td>
-                <td>Information</td>
+                <td class="i18n" data-i18n="information">Information</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/manor.svg"/></td>
-                <td>Manor</td>
+                <td class="i18n" data-i18n="manor">Manor</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/museum.svg"/></td>
-                <td>Museum</td>
+                <td class="i18n" data-i18n="museum">Museum</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/monument.svg"/></td>
-                <td>Monument</td>
+                <td class="i18n" data-i18n="monument">Monument</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/office.svg"/></td>
-                <td>Office</td>
+                <td class="i18n" data-i18n="office">Office</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/palace.svg"/></td>
-                <td>Palace</td>
+                <td class="i18n" data-i18n="palace">Palace</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/picnic.svg"/></td>
-                <td>Pic nic</td>
+                <td class="i18n" data-i18n="picnic">Pic nic</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/viewpoint.svg"/></td>
-                <td>Viewpoint</td>
+                <td class="i18n" data-i18n="viewpoint">Viewpoint</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/artwork.svg"/></td>
-                <td>Artwork</td>
+                <td class="i18n" data-i18n="artwork">Artwork</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/audioguide.svg"/></td>
-                <td>Audioguide</td>
+                <td class="i18n" data-i18n="audioguide">Audioguide</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/board.svg"/></td>
-                <td>Board</td>
+                <td class="i18n" data-i18n="board">Board</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/bust.svg"/></td>
-                <td>Bust</td>
+                <td class="i18n" data-i18n="bust">Bust</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/city_gate.svg"/></td>
-                <td>City gate</td>
+                <td class="i18n" data-i18n="city-gate">City gate</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/guidepost.svg"/></td>
-                <td>Guidepost</td>
+                <td class="i18n" data-i18n="guidepost">Guidepost</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/map.svg"/></td>
-                <td>Map</td>
+                <td class="i18n" data-i18n="map">Map</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/memorial.svg"/></td>
-                <td>Memorial</td>
+                <td class="i18n" data-i18n="memorial">Memorial</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/obelisk.svg"/></td>
-                <td>Obelisk</td>
+                <td class="i18n" data-i18n="obelisk">Obelisk</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/plaque.svg"/></td>
-                <td>Plaque</td>
+                <td class="i18n" data-i18n="plaque">Plaque</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/shrine.svg"/></td>
-                <td>Shrine</td>
+                <td class="i18n" data-i18n="shrine">Shrine</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/statue.svg"/></td>
-                <td>Statue</td>
+                <td class="i18n" data-i18n="statue">Statue</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/historic/stone.svg"/></td>
-                <td>Stone</td>
+                <td class="i18n" data-i18n="stone">Stone</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/tourism/terminal.svg"/></td>
-                <td>Terminal</td>
+                <td class="i18n" data-i18n="terminal">Terminal</td>
             </tr>
         </table>
 
-        <h3>Miscellaneous</h3>
+        <h3 class="i18n" data-i18n="misc">Miscellaneous</h3>
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/highway/traffic_light.13.svg"/></td>
-                <td>Traffic light</td>
+                <td class="i18n" data-i18n="trafic-light">Traffic light</td>
             </tr>
             <tr>
                 <td><img src="symbols/amenity/traffic_calming.svg"/></td>
-                <td>Traffic calming</td>
+                <td class="i18n" data-i18n="trafic-calming">Traffic calming</td>
             </tr>
             <tr>
                 <td>
                     <span style="margin: auto; display: block; width: 10px; height: 10px; background-color: #0092da; -webkit-mask: url(symbols/osmfr/crossing.svg) no-repeat center; mask: url(symbols/osmfr/crossing.svg) no-repeat center; -webkit-mask-size: contain; mask-size: contain"></span>
                 </td>
-                <td>Bicycle zebra crossing</td>
+                <td class="i18n" data-i18n="bike-zebra">Bicycle zebra crossing</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/highway/ford.svg"/></td>
-                <td>Ford</td>
+                <td class="i18n" data-i18n="ford">Ford</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/highway/elevator.12.svg"/></td>
-                <td>Elevator (blue if bicycle-friendly)</td>
+                <td class="i18n" data-i18n="elevator">Elevator (blue if bicycle-friendly)</td>
             </tr>
 
             <tr>
@@ -859,89 +861,89 @@
                     <span style="margin: auto; display: block; width: 10px; height: 10px; background-color: #555; -webkit-mask: url(symbols/openstreetmap-carto/square.svg) no-repeat center; mask: url(symbols/openstreetmap-carto/square.svg) no-repeat center; -webkit-mask-size: contain; mask-size: contain"></span>
                     <span style="font-family: sans-serif; color: #555; font-weight: 500;">Foo</span>
                 </td>
-                <td>Train station</td>
+                <td class="i18n" data-i18n="train-station">Train station</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/aerodrome.12.svg"/></td>
-                <td>Aerodrome</td>
+                <td class="i18n" data-i18n="aerodrome">Aerodrome</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/helipad.16.svg"/></td>
-                <td>Helipad</td>
+                <td class="i18n" data-i18n="helipad">Helipad</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/bunker.svg"/></td>
-                <td>Bunker</td>
+                <td class="i18n" data-i18n="bunker">Bunker</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/chimney.svg"/></td>
-                <td>Chimney (e.g. factory)</td>
+                <td class="i18n" data-i18n="chimney">Chimney (e.g. factory)</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/crane.svg"/></td>
-                <td>Crane</td>
+                <td class="i18n" data-i18n="crane">Crane</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/cross.svg"/></td>
-                <td>Cross</td>
+                <td class="i18n" data-i18n="cross">Cross</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/amenity/fountain.svg"/></td>
-                <td>Fountain</td>
+                <td class="i18n" data-i18n="fountain">Fountain</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/lighthouse.svg"/></td>
-                <td>Light house</td>
+                <td class="i18n" data-i18n="light-house">Light house</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/storage_tank.svg"/></td>
-                <td>Storage tank</td>
+                <td class="i18n" data-i18n="storage-tank">Storage tank</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/water_tower.svg"/></td>
-                <td>Water tower</td>
+                <td class="i18n" data-i18n="water-tower">Water tower</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/generator_wind.svg"/></td>
-                <td>Wind power plant</td>
+                <td class="i18n" data-i18n="wind-plant">Wind power plant</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/man_made/windmill.svg"/></td>
-                <td>Wind mill</td>
+                <td class="i18n" data-i18n="wind-mill">Wind mill</td>
             </tr>
         </table>
 
 
-        <h3>Barriers</h3>
+        <h3 class="i18n" data-i18n="barriers">Barriers</h3>
 
         <table>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/barriers/cattle_grid.svg"/></td>
-                <td>Cattle grid</td>
+                <td class="i18n" data-i18n="cattle-grid">Cattle grid</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/barriers/cycle_barrier.svg"/></td>
-                <td>Cycle barrier</td>
+                <td class="i18n" data-i18n="cycle-barrier">Cycle barrier</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/barriers/gate.svg"/></td>
-                <td>Gate</td>
+                <td class="i18n" data-i18n="gate">Gate</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/barriers/kissing_gate.svg"/></td>
-                <td>Kissing gate</td>
+                <td class="i18n" data-i18n="kissing-gate">Kissing gate</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/barriers/lift_gate.svg"/></td>
-                <td>Lift gate</td>
+                <td class="i18n" data-i18n="lift-gate">Lift gate</td>
             </tr>
             <tr>
                 <td><img src="symbols/openstreetmap-carto/barriers/stile.svg"/></td>
-                <td>Stile</td>
+                <td class="i18n" data-i18n="stile">Stile</td>
             </tr>
             <tr>
                 <td><span style="margin: auto; display: block; width: 3px; height: 3px; background-color: #7d7c7c;"></span></td>
-                <td>Bollard, blocks, jersey barriers</td>
+                <td class="i18n" data-i18n="blocks">Bollard, blocks, jersey barriers</td>
             </tr>
         </table>
     </body>
